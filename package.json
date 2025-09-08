@@ -16,7 +16,10 @@
     "lint:fix": "eslint \"src/**/*.+(ts|tsx)\" --fix",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "predeploy": "pnpm run build",
+    "deploy": "gh-pages -d out"
+
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
